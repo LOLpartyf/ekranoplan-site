@@ -80,14 +80,28 @@ a {
 }
 
 .logo-img {
-    height: 55px;
+    height: 80px;
     width: auto;
-    transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-    filter: drop-shadow(0 2px 8px rgba(0, 0, 0, 0.1));
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    filter: drop-shadow(0 4px 12px rgba(0, 212, 255, 0.3)) drop-shadow(0 0 20px rgba(0, 212, 255, 0.2)) drop-shadow(0 2px 4px rgba(0, 0, 0, 0.1));
+    animation: logoGlow 3s ease-in-out infinite;
+}
+
+@keyframes logoGlow {
+
+    0%,
+    100% {
+        filter: drop-shadow(0 4px 12px rgba(0, 212, 255, 0.3)) drop-shadow(0 0 20px rgba(0, 212, 255, 0.2)) drop-shadow(0 2px 4px rgba(0, 0, 0, 0.1));
+    }
+
+    50% {
+        filter: drop-shadow(0 6px 16px rgba(0, 212, 255, 0.5)) drop-shadow(0 0 30px rgba(0, 212, 255, 0.4)) drop-shadow(0 2px 8px rgba(0, 0, 0, 0.2));
+    }
 }
 
 .logo-img:hover {
-    transform: scale(1.08) rotate(-2deg);
+    transform: scale(1.15) rotate(-3deg);
+    filter: drop-shadow(0 8px 20px rgba(0, 212, 255, 0.6)) drop-shadow(0 0 40px rgba(0, 212, 255, 0.5)) drop-shadow(0 4px 12px rgba(0, 0, 0, 0.3));
 }
 
 .nav {
