@@ -80,10 +80,11 @@ a {
 }
 
 .logo-img {
-    height: 80px;
+    height: 140px;
     width: auto;
     transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-    filter: drop-shadow(0 4px 12px rgba(0, 212, 255, 0.3)) drop-shadow(0 0 20px rgba(0, 212, 255, 0.2)) drop-shadow(0 2px 4px rgba(0, 0, 0, 0.1));
+    opacity: 0.85;
+    filter: drop-shadow(0 4px 12px rgba(0, 212, 255, 0.2)) drop-shadow(0 0 20px rgba(0, 212, 255, 0.15)) drop-shadow(0 2px 4px rgba(0, 0, 0, 0.08));
     animation: logoGlow 3s ease-in-out infinite;
 }
 
@@ -91,17 +92,20 @@ a {
 
     0%,
     100% {
-        filter: drop-shadow(0 4px 12px rgba(0, 212, 255, 0.3)) drop-shadow(0 0 20px rgba(0, 212, 255, 0.2)) drop-shadow(0 2px 4px rgba(0, 0, 0, 0.1));
+        filter: drop-shadow(0 4px 12px rgba(0, 212, 255, 0.2)) drop-shadow(0 0 20px rgba(0, 212, 255, 0.15)) drop-shadow(0 2px 4px rgba(0, 0, 0, 0.08));
+        opacity: 0.85;
     }
 
     50% {
-        filter: drop-shadow(0 6px 16px rgba(0, 212, 255, 0.5)) drop-shadow(0 0 30px rgba(0, 212, 255, 0.4)) drop-shadow(0 2px 8px rgba(0, 0, 0, 0.2));
+        filter: drop-shadow(0 6px 16px rgba(0, 212, 255, 0.3)) drop-shadow(0 0 30px rgba(0, 212, 255, 0.25)) drop-shadow(0 2px 8px rgba(0, 0, 0, 0.12));
+        opacity: 0.95;
     }
 }
 
 .logo-img:hover {
-    transform: scale(1.15) rotate(-3deg);
-    filter: drop-shadow(0 8px 20px rgba(0, 212, 255, 0.6)) drop-shadow(0 0 40px rgba(0, 212, 255, 0.5)) drop-shadow(0 4px 12px rgba(0, 0, 0, 0.3));
+    transform: scale(1.08) rotate(-2deg);
+    opacity: 1;
+    filter: drop-shadow(0 8px 20px rgba(0, 212, 255, 0.4)) drop-shadow(0 0 40px rgba(0, 212, 255, 0.35)) drop-shadow(0 4px 12px rgba(0, 0, 0, 0.15));
 }
 
 .nav {
