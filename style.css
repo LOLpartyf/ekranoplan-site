@@ -818,79 +818,87 @@ a {
     background: var(--accent-hover);
 }
 
-/* Video background styles */
+/* Video side-by-side layout */
 .timeline-with-video {
-    position: relative;
-    overflow: hidden;
-    min-height: 600px;
+    background: white;
 }
 
-.timeline-video-bg {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: 0;
+.video-text-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+    align-items: start;
+}
+
+.timeline-text-column {
+    color: var(--text-dark);
+}
+
+.timeline-text-column h3 {
+    color: var(--primary-color);
+}
+
+.timeline-text-column p {
+    color: #333;
+}
+
+.timeline-text-column .highlight {
+    background: linear-gradient(135deg, rgba(0, 212, 255, 0.08), rgba(168, 85, 247, 0.08));
+    border-left-color: var(--accent-color);
+}
+
+.timeline-video-column {
+    position: sticky;
+    top: 100px;
+}
+
+.video-container {
+    position: relative;
     border-radius: 20px;
     overflow: hidden;
+    box-shadow: 0 20px 60px rgba(0, 212, 255, 0.4);
+    border: 3px solid rgba(0, 212, 255, 0.3);
+    background: linear-gradient(135deg, #0f1419, #1a2332);
 }
 
-.bg-video {
+.side-video {
     width: 100%;
-    height: 100%;
-    object-fit: cover;
-    opacity: 0.85;
+    height: auto;
+    display: block;
+    border-radius: 17px;
 }
 
-.video-overlay {
+.video-label {
     position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(135deg,
-            rgba(15, 20, 25, 0.4) 0%,
-            rgba(26, 35, 50, 0.45) 50%,
-            rgba(45, 62, 80, 0.4) 100%);
-}
-
-.timeline-text-over-video {
-    position: relative;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: linear-gradient(135deg, rgba(0, 212, 255, 0.95), rgba(0, 180, 230, 0.95));
+    color: white;
+    padding: 0.8rem 2rem;
+    border-radius: 50px;
+    font-weight: 700;
+    font-size: 1.1rem;
+    box-shadow: 0 10px 30px rgba(0, 212, 255, 0.5);
+    animation: pulse-glow 2s ease-in-out infinite;
     z-index: 10;
-    color: white;
-}
-
-.timeline-text-over-video h3 {
-    color: white;
-    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
-}
-
-.timeline-text-over-video p {
-    color: rgba(255, 255, 255, 0.95);
-}
-
-.timeline-text-over-video .highlight {
-    background: linear-gradient(135deg, rgba(0, 212, 255, 0.2), rgba(168, 85, 247, 0.2));
-    border-left-color: rgba(0, 212, 255, 0.8);
 }
 
 /* Speed comparison cards */
 .speed-comparison {
     margin: 3rem 0;
     padding: 2rem;
-    background: rgba(255, 255, 255, 0.1);
+    background: linear-gradient(135deg, rgba(0, 212, 255, 0.05), rgba(168, 85, 247, 0.05));
     backdrop-filter: blur(10px);
     border-radius: 20px;
-    border: 1px solid rgba(255, 255, 255, 0.2);
+    border: 2px solid rgba(0, 212, 255, 0.2);
 }
 
 .speed-comparison h4 {
-    color: white;
+    color: var(--primary-color);
     font-size: 1.8rem;
     margin-bottom: 2rem;
     text-align: center;
-    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
 }
 
 .speed-cards {
@@ -1017,8 +1025,15 @@ a {
         min-height: auto;
     }
 
-    .bg-video {
-        opacity: 0.2;
+    .video-text-grid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+
+    .timeline-video-column {
+        position: relative;
+        top: 0;
+        order: -1;
     }
 
     .speed-cards {
