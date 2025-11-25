@@ -80,28 +80,13 @@ a {
 }
 
 .logo-img {
-    height: 60px;
+    height: 50px;
     width: auto;
-    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-    filter: drop-shadow(0 2px 8px rgba(0, 212, 255, 0.2)) drop-shadow(0 0 15px rgba(0, 212, 255, 0.15));
-    animation: logoGlow 3s ease-in-out infinite;
-}
-
-@keyframes logoGlow {
-
-    0%,
-    100% {
-        filter: drop-shadow(0 2px 8px rgba(0, 212, 255, 0.2)) drop-shadow(0 0 15px rgba(0, 212, 255, 0.15));
-    }
-
-    50% {
-        filter: drop-shadow(0 3px 12px rgba(0, 212, 255, 0.3)) drop-shadow(0 0 25px rgba(0, 212, 255, 0.25));
-    }
+    transition: transform 0.3s ease;
 }
 
 .logo-img:hover {
-    transform: scale(1.05);
-    filter: drop-shadow(0 4px 15px rgba(0, 212, 255, 0.4)) drop-shadow(0 0 35px rgba(0, 212, 255, 0.35));
+    transform: scale(1.03);
 }
 
 .nav {
