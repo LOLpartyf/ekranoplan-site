@@ -80,14 +80,10 @@ a {
 }
 
 .logo-img {
-    height: 140px;
+    height: 60px;
     width: auto;
     transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-    opacity: 0.85;
-    background: white;
-    padding: 8px;
-    border-radius: 10px;
-    filter: drop-shadow(0 4px 12px rgba(0, 212, 255, 0.2)) drop-shadow(0 0 20px rgba(0, 212, 255, 0.15)) drop-shadow(0 2px 4px rgba(0, 0, 0, 0.08));
+    filter: drop-shadow(0 2px 8px rgba(0, 212, 255, 0.2)) drop-shadow(0 0 15px rgba(0, 212, 255, 0.15));
     animation: logoGlow 3s ease-in-out infinite;
 }
 
@@ -95,20 +91,17 @@ a {
 
     0%,
     100% {
-        filter: drop-shadow(0 4px 12px rgba(0, 212, 255, 0.2)) drop-shadow(0 0 20px rgba(0, 212, 255, 0.15)) drop-shadow(0 2px 4px rgba(0, 0, 0, 0.08));
-        opacity: 0.85;
+        filter: drop-shadow(0 2px 8px rgba(0, 212, 255, 0.2)) drop-shadow(0 0 15px rgba(0, 212, 255, 0.15));
     }
 
     50% {
-        filter: drop-shadow(0 6px 16px rgba(0, 212, 255, 0.3)) drop-shadow(0 0 30px rgba(0, 212, 255, 0.25)) drop-shadow(0 2px 8px rgba(0, 0, 0, 0.12));
-        opacity: 0.95;
+        filter: drop-shadow(0 3px 12px rgba(0, 212, 255, 0.3)) drop-shadow(0 0 25px rgba(0, 212, 255, 0.25));
     }
 }
 
 .logo-img:hover {
-    transform: scale(1.08) rotate(-2deg);
-    opacity: 1;
-    filter: drop-shadow(0 8px 20px rgba(0, 212, 255, 0.4)) drop-shadow(0 0 40px rgba(0, 212, 255, 0.35)) drop-shadow(0 4px 12px rgba(0, 0, 0, 0.15));
+    transform: scale(1.05);
+    filter: drop-shadow(0 4px 15px rgba(0, 212, 255, 0.4)) drop-shadow(0 0 35px rgba(0, 212, 255, 0.35));
 }
 
 .nav {
