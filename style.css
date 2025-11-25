@@ -84,6 +84,9 @@ a {
     width: auto;
     transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
     opacity: 0.85;
+    background: white;
+    padding: 8px;
+    border-radius: 10px;
     filter: drop-shadow(0 4px 12px rgba(0, 212, 255, 0.2)) drop-shadow(0 0 20px rgba(0, 212, 255, 0.15)) drop-shadow(0 2px 4px rgba(0, 0, 0, 0.08));
     animation: logoGlow 3s ease-in-out infinite;
 }
@@ -1047,4 +1050,28 @@ a {
     .speed-card.highlight-card {
         transform: scale(1);
     }
+}
+
+/* Video in timeline */
+.timeline-video {
+    margin: 2rem 0;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 20px 60px rgba(0, 212, 255, 0.4);
+    border: 3px solid rgba(0, 212, 255, 0.3);
+}
+
+.ekranoplan-video {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.video-caption {
+    text-align: center;
+    font-weight: 700;
+    font-size: 1.1rem;
+    color: var(--accent-color);
+    margin-top: 1rem;
+    padding: 0.5rem;
 }
